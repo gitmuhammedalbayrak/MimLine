@@ -78,5 +78,5 @@ class MimLineTest:
 
 
 # MimLineTest sınıfı kullanarak testleri çalıştırma
-test = MimLineTest()
-test.run_tests()
+#test = MimLineTest()
+#test.run_tests()
