@@ -16,18 +16,11 @@ Herhangi bir ek kurulum gerektirmez. Kodu doğrudan kullanabilirsiniz.
 
 Aşağıdaki örnek, MimLine sınıfının nasıl kullanılacağını göstermektedir:
 
-```python
-import random
-
-class MimLine:
-    def __init__(self, name, inEnd=1, outEnd=1, inDimension=2, outDimension=2):
-        # İçerik buraya gelecek
-
-# MimLineTest sınıfı ve testler buraya gelecek
-
+'''python
 # Örnek kullanım
 line = MimLine("Example", inEnd=2, outEnd=1, inDimension=3, outDimension=2)
 line.display()
+'''
 Testler
 MimLine sınıfının doğru çalışıp çalışmadığını kontrol etmek için testler oluşturulmuştur. Aşağıdaki kod örneği, 5000 adet testi gerçekleştirecek olan MimLineTest sınıfını içermektedir:
 
