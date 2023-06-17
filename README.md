@@ -16,11 +16,11 @@ Herhangi bir ek kurulum gerektirmez. Kodu doğrudan kullanabilirsiniz.
 
 Aşağıdaki örnek, MimLine sınıfının nasıl kullanılacağını göstermektedir:
 
-'''python
+python
 # Örnek kullanım
 line = MimLine("Example", inEnd=2, outEnd=1, inDimension=3, outDimension=2)
 line.display()
-'''
+
 Testler
 MimLine sınıfının doğru çalışıp çalışmadığını kontrol etmek için testler oluşturulmuştur. Aşağıdaki kod örneği, 5000 adet testi gerçekleştirecek olan MimLineTest sınıfını içermektedir:
 
