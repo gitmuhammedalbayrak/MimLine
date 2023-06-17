@@ -17,14 +17,14 @@ Herhangi bir ek kurulum gerektirmez. Kodu doğrudan kullanabilirsiniz.
 Aşağıdaki örnek, MimLine sınıfının nasıl kullanılacağını göstermektedir:
 
 # Örnek kullanım
-python
+'''
 line = MimLine("Example", inEnd=2, outEnd=1, inDimension=3, outDimension=2)
 line.display()
-
+'''
 # Testler
 MimLine sınıfının doğru çalışıp çalışmadığını kontrol etmek için testler oluşturulmuştur. Aşağıdaki kod örneği, 5000 adet testi gerçekleştirecek olan MimLineTest sınıfını içermektedir:
 
-python
+'''
 import random
 
 class MimLineTest:
@@ -36,7 +36,7 @@ class MimLineTest:
 
     def test_mimline(self, line):
         # Testlerin gerçekleştirilmesi burada yapılacak
-
+'''
 # MimLineTest sınıfı kullanarak testleri çalıştırma
 python
 test = MimLineTest()
