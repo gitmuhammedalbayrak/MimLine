@@ -1,6 +1,20 @@
 # MimLine
 
-MimLine, belirli parametrelerle birlikte bir örnek oluşturan bir sınıftır. Bu örnekte, sınıfın nasıl kullanılacağı ve özellikleri açıklanmaktadır.
+MimLine, "0"'ın dizinin başında ve sonunda olduğu merkezde "1"in olduğu iki kutuplu ve çok boyutluluğa müsaid bir sayı dizini örneğidir. Bu dizinde "1" merkezde olarak pozitif eki "2" olup, nekatif komşusu "-2"'dir. "-1" dizinde yer almayıp sanrısal olarak dikey alt alanında konumlandırılmıştır: ama unutmayın sanrısal olarak.
+
+Negatif alan sayı nesnesinin içeriğini içlemini temsil etmekteyken, pozitif alan kapsamını kapsayıcılarını temsil eder. Kapsam ve içlem'de her bir öteki bir katmanı ifade eder; ve her katmanın boyutu kendi içindedir.
+
+Örnek vermek gerekirse:
+Bir elma = "1"
+Elmanın birinci dereceden içlemi -bu her zaman nesnenin tüm içeriklerinin toplamını temsil eder- = -2
+Elmanın ikinci dereceden içlemi -örneğin fizik ilmi cihetinden içlemi- -3
+
+Boyu örneği için: -3 üzerinden örneklemek gerekirse: -gene elme üzerinden-
+[-3[0,1]] = Burada fiziksel olarak iki parçadan incelendiğini görüyoruz: bu iki sayı için de şu örneklemeyi yapabiliriz:
+0 = kütlesi
+1 = hızı
+
+pozitif durumunu da izahata geleceğiz.
 
 ## Özellikler
 
