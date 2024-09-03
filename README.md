@@ -1,42 +1,44 @@
 # MimLine
 
-MimLine, "0"'ın dizinin başında ve sonunda olduğu merkezde "1"in olduğu iki kutuplu ve çok boyutluluğa müsaid bir sayı dizini örneğidir. Bu dizinde "1" merkezde olarak pozitif eki "2" olup, nekatif komşusu "-2"'dir. "-1" dizinde yer almayıp sanrısal olarak dikey alt alanında konumlandırılmıştır: ama unutmayın sanrısal olarak.
+MimLine is an example of a bipolar and multi-dimensional number sequence, where "0" is at the beginning and the end of the sequence, with "1" at the center. In this sequence, "1" is centrally located, with its positive neighbor being "2" and its negative neighbor being "-2". The number "-1" is not present in the sequence but is conceptually positioned in a vertical sub-space: remember, this is purely conceptual.
 
-Negatif alan sayı nesnesinin içeriğini içlemini temsil etmekteyken, pozitif alan kapsamını kapsayıcılarını temsil eder. Kapsam ve içlem'de her bir öteki bir katmanı ifade eder; ve her katmanın boyutu kendi içindedir.
+The negative space represents the essence or inner content of a numerical object, while the positive space represents its scope or encompassing elements. In scope and essence, each layer represents a different dimension, with each dimension containing its own levels.
 
-Örnek vermek gerekirse:
-Bir elma = "1"
-Elmanın birinci dereceden içlemi -bu her zaman nesnenin tüm içeriklerinin toplamını temsil eder- = -2
-Elmanın ikinci dereceden içlemi -örneğin fizik ilmi cihetinden içlemi- -3
+For example:
+An apple = "1"
+The first-degree essence of the apple (which always represents the sum of all content of the object) = -2
+The second-degree essence of the apple (e.g., its essence in the context of physics) = -3
 
-Boyu örneği için: -3 üzerinden örneklemek gerekirse: -gene elme üzerinden-
-[-3[0,1]] = Burada fiziksel olarak iki parçadan incelendiğini görüyoruz: bu iki sayı için de şu örneklemeyi yapabiliriz:
-0 = kütlesi
-1 = hızı
+For the dimension example, if we take -3 (again using the apple):
+[-3[0,1]] = Here, we see that it is analyzed in two parts physically. For these two numbers, we can give the following examples:
+0 = its mass
+1 = its speed
 
-pozitif durumunu da izahata geleceğiz.
+The positive aspect will be explained later.
 
-## Özellikler
+## Features
 
-- `name`: Örneğin adını temsil eder.
-- `centerArray`: Merkez dizisi olarak adlandırılan bir dizi tutar.
-- `dimensional_centerArray`: Boyutlu merkez dizisini tutar.
+- `name`: Represents the name of the example.
+- `centerArray`: Holds an array referred to as the central array.
+- `dimensional_centerArray`: Holds a dimensional central array.
 
-## Kurulum
+## Installation
 
-Herhangi bir ek kurulum gerektirmez. Kodu doğrudan kullanabilirsiniz.
+No additional installation is required. You can use the code directly.
 
-## Kullanım
+## Usage
 
-Aşağıdaki örnek, MimLine sınıfının nasıl kullanılacağını göstermektedir:
+The following example demonstrates how to use the MimLine class:
 
-# Örnek kullanım
 ```python
+# Example usage
 line = MimLine("Example", inEnd=2, outEnd=1, inDimension=3, outDimension=2)
 line.display()
 ```
-# Testler
-MimLine sınıfının doğru çalışıp çalışmadığını kontrol etmek için testler oluşturulmuştur. Aşağıdaki kod örneği, 5000 adet testi gerçekleştirecek olan MimLineTest sınıfını içermektedir:
+
+## Tests
+
+Tests have been created to verify the correct functioning of the MimLine class. The following code example includes the MimLineTest class, which will run 5000 tests:
 
 ```python
 import random
@@ -57,22 +59,27 @@ class MimLineTest:
             print()
 
     def test_mimline(self, line):
-        # Başında ve sonunda sıfır olup olmadığını kontrol etme
+        # Check if there is a zero at the beginning and end
         if line.centerArray[0] == 0 and line.centerArray[-1] == 0:
-            print("Başında ve sonunda sıfır var.")
+            print("Zero is at the beginning and end.")
         else:
-            raise ValueError("Başında veya sonunda sıfır yok.")
+            raise ValueError("There is no zero at the beginning or end.")
 
-        # Liste içinde 1 değerinin olup olmadığını kontrol etme
+        # Check if the value 1 is present in the list
         if 1 in line.dimensional_centerArray:
-            print("Listede 1 değeri mevcut.")
+            print("The value 1 is present in the list.")
         else:
-            raise ValueError("Listede 1 değeri yok veya değiştirilmiş.")
+            raise ValueError("The value 1 is not in the list or has been altered.")
 ```
-# MimLineTest sınıfı kullanarak testleri çalıştırma
+
+### Running Tests with the MimLineTest Class
 ```python
 test = MimLineTest()
 test.run_tests()
 ```
 
-Testlerin sonucunda oluşan hatalar, ValueError türünde bir hata fırlatarak gösterilmektedir. Başarı durumunda herhangi bir çıktı üretilmeyecektir.
+Errors resulting from the tests will be shown by raising a ValueError. If the tests pass successfully, no output will be produced.
+
+## License
+
+This project is licensed under the T1 License. To obtain the license or for more information, please contact me directly. If I am not reachable, it should be considered that no license has been granted.
